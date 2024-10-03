@@ -1,0 +1,81 @@
+/* Basic styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main{
+    flex: 1;
+}
+
+header, footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+/* Layout for store items */
+.store-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Default: 3 columns for large screens */
+    gap: 20px;
+    padding: 20px;
+}
+
+.item {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.item h2 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.item p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+/* Hover effect */
+.item:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive for tablet (768px to 1024px) */
+@media (max-width: 1024px) {
+    .store-items {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
+}
+
+/* Responsive for mobile (less than 768px) */
+@media (max-width: 768px) {
+    .store-items {
+        grid-template-columns: 1fr; /* 1 column for mobile phones */
+    }
+}
