@@ -17,8 +17,8 @@ main{
 }
 
 header, footer {
-    background-color: #333;
-    color: white;
+    background-color: white;
+    color: black;
     text-align: center;
     padding: 1rem;
 }
@@ -33,6 +33,13 @@ header, footer {
     padding: 0 20px; /* Add padding for the navbar */
 }
 
+.toggle-button {
+    display: none; /* Hide by default */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
 
 .logo img {
     height: 50px; /* Set logo height */
@@ -44,6 +51,8 @@ header, footer {
     display: flex;
     gap: 20px; /* Space between links */
     margin: 0; /* Remove default margin */
+    font-variant: small-caps;
+    font-weight: 700;
 }
 
 .nav-links li {
@@ -51,7 +60,7 @@ header, footer {
 }
 
 .nav-links a {
-    color: white;
+    color: black;
     text-decoration: none;
     font-size: clamp(1rem, 2vw, 1.2rem); /* Responsive font size */
     transition: color 0.3s; /* Smooth transition for hover effect */
@@ -59,7 +68,7 @@ header, footer {
 
 /* Hover effect for navigation links */
 .nav-links a:hover {
-    color: #ffcc00; /* Change color on hover */
+    color: #67000e; /* Change color on hover */
 }
 
 /* Layout for store items */
@@ -100,6 +109,7 @@ header, footer {
     transform: translateY(-5px);
 }
 
+
 /* Responsive for tablet (768px to 1024px) */
 @media (max-width: 1024px) {
     .store-items {
@@ -109,7 +119,28 @@ header, footer {
 
 /* Responsive for mobile (less than 768px) */
 @media (max-width: 768px) {
+
     .store-items {
-        grid-template-columns: 1fr; /* 1 column for mobile phones */
+        grid-template-columns: 1fr; /* 1 column for mobile phones */   
+    }
+
+    .nav-links {
+        display: none; /* Hide links by default */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Absolute positioning for dropdown */
+        background-color: white; /* Match the navbar's background */
+        top: 60px; /* Position below the navbar */
+        left: 0;
+        width: 100%; /* Full width */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow */
+        z-index: 1; /* Ensure it appears above other content */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show links when active */
+    }
+
+    .toggle-button {
+        display: block; /* Show the toggle button on small screens */
     }
 }
