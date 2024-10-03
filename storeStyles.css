@@ -23,11 +23,43 @@ header, footer {
     padding: 1rem;
 }
 
-nav a {
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Set max width for the header */
+    margin: 0 auto; /* Center the navbar */
+    padding: 0 20px; /* Add padding for the navbar */
+}
+
+
+.logo img {
+    height: 50px; /* Set logo height */
+}
+
+/* Navigation links styles */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Space between links */
+    margin: 0; /* Remove default margin */
+}
+
+.nav-links li {
+    display: inline; /* Inline links */
+}
+
+.nav-links a {
     color: white;
-    margin: 0 15px;
     text-decoration: none;
-    font-size: clamp(0.9rem, 2vw, 1.1rem); /* Adjust font size for links */
+    font-size: clamp(1rem, 2vw, 1.2rem); /* Responsive font size */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for navigation links */
+.nav-links a:hover {
+    color: #ffcc00; /* Change color on hover */
 }
 
 /* Layout for store items */
