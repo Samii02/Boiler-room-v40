@@ -9,6 +9,7 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-size: clamp(1rem, 2vw, 1.2rem); /* Responsive font size using clamp */
 }
 
 main{
@@ -26,6 +27,7 @@ nav a {
     color: white;
     margin: 0 15px;
     text-decoration: none;
+    font-size: clamp(0.9rem, 2vw, 1.1rem); /* Adjust font size for links */
 }
 
 /* Layout for store items */
@@ -52,12 +54,12 @@ nav a {
 }
 
 .item h2 {
-    font-size: 1.2rem;
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem); /* Responsive heading size */
     margin: 10px 0;
 }
 
 .item p {
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 2vw, 1.1rem); /* Responsive paragraph size */
     margin: 5px 0;
 }
 
