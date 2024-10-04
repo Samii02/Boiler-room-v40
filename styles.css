@@ -10,6 +10,7 @@ body {
     line-height: 1.6;
     color: #000; /* Svart text på ljus bakgrund */
     background-color: #f9f9f9;
+    overflow-x: hidden; /* Döljer horisontell scrollning */
 }
 
 a {
@@ -120,6 +121,7 @@ img {
     display: flex;
     justify-content: space-around;
     gap: 1.5rem;
+    flex-wrap: wrap; /* Gör att produkterna bryts vid mindre skärmar */
 }
 
 .product {
@@ -127,7 +129,9 @@ img {
     padding: 1rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
+    max-width: 300px; /* Maxbredd för produkten */
+    flex: 1; /* Gör produkterna flexibla */
+    margin: 0 10px; /* Lägger till marginal för produkterna */
 }
 
 .product img {
@@ -159,6 +163,74 @@ footer p {
     font-size: 0.9rem;
 }
 
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Set max width for the header */
+    margin: 0 auto; /* Center the navbar */
+    padding: 0 20px; /* Add padding for the navbar */
+}
+
+.toggle-button {
+    display: none; /* Hide by default */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.logo img {
+    height: 50px; /* Set logo height */
+}
+
+/* Navigation links styles */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Space between links */
+    margin: 0; /* Remove default margin */
+    font-variant: small-caps;
+    font-weight: 700;
+}
+
+.nav-links li {
+    display: inline; /* Inline links */
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-size: clamp(1rem, 2vw, 1.2rem); /* Responsive font size */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Navigation links styles */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Space between links */
+    margin: 0; /* Remove default margin */
+    font-variant: small-caps;
+    font-weight: 700;
+}
+
+.nav-links li {
+    display: inline; /* Inline links */
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-size: clamp(1rem, 2vw, 1.2rem); /* Responsive font size */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for navigation links */
+.nav-links a:hover {
+    color: #67000e; /* Change color on hover */
+}
 /* Chattbot */
 .chatbot-container {
     position: fixed;
@@ -212,4 +284,33 @@ input[type="text"] {
     padding: 0.5rem;
     border: 1px solid #ddd;
     border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .product-gallery {
+        flex-direction: column; /* Bryt produkterna i kolumner istället */
+        align-items: center; /* Centrera produkterna */
+    }
+
+    .product {
+        max-width: 90%; /* Låt produkterna ta upp mer utrymme på små skärmar */
+        margin: 10px 0; /* Marginal mellan produkterna */
+    }
+    .nav-links {
+        display: none; /* Hide links by default */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Absolute positioning for dropdown */
+        background-color: white; /* Match the navbar's background */
+        top: 60px; /* Position below the navbar */
+        left: 0;
+        width: 100%; /* Full width */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow */
+        z-index: 1; /* Ensure it appears above other content */
+    }
+    .nav-links.active {
+        display: flex; /* Show links when active */
+    }
+    .toggle-button {
+        display: block; /* Show the toggle button on small screens */
+    }
 }
