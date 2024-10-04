@@ -11,14 +11,13 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href="index.html"><img src="logo.png" alt="Smyckesbutikens logotyp"></a>
+                <a href="index.html"><img src="https://picsum.photos/100/50" alt="Smyckesbutikens logotyp"></a>
             </div>
             <ul class="nav-links">
                 <li><a href="index.html" aria-current="page">Hem</a></li>
                 <li><a href="#">Kollektioner</a></li>
                 <li><a href="#">Nyheter</a></li>
                 <li><a href="#">Kontakt</a></li>
-                <!-- Länkar till dina kollegors sidor -->
                 <li><a href="page1.html">Kollega 1</a></li>
                 <li><a href="page2.html">Kollega 2</a></li>
             </ul>
@@ -40,17 +39,17 @@
             <h2>Utvalda Produkter</h2>
             <div class="product-gallery">
                 <div class="product">
-                    <img src="ring.jpg" alt="Elegant guldring">
+                    <img src="https://picsum.photos/300/200?random=1" alt="Elegant guldring">
                     <h3>Guldring</h3>
                     <p>Tidlös design med vackra detaljer.</p>
                 </div>
                 <div class="product">
-                    <img src="necklace.jpg" alt="Silverhalsband">
+                    <img src="https://picsum.photos/300/200?random=2" alt="Silverhalsband">
                     <h3>Silverhalsband</h3>
                     <p>Elegant och stilrent halsband.</p>
                 </div>
                 <div class="product">
-                    <img src="bracelet.jpg" alt="Diamantarmband">
+                    <img src="https://picsum.photos/300/200?random=3" alt="Diamantarmband">
                     <h3>Diamantarmband</h3>
                     <p>Exklusivt armband med diamanter.</p>
                 </div>
@@ -61,5 +60,54 @@
     <footer>
         <p>&copy; 2024 Smyckesbutiken. Alla rättigheter förbehållna.</p>
     </footer>
+
+    <!-- Chattbot-sektionen -->
+    <div class="chatbot-container">
+        <div class="chatbot-header" onclick="toggleChat()">
+            <h4>Chattbot</h4>
+        </div>
+        <div class="chatbot-body" id="chatbotBody">
+            <div class="chat-output" id="chatOutput"></div>
+            <input type="text" id="chatInput" placeholder="Skriv din fråga här..." onkeydown="handleInput(event)">
+        </div>
+    </div>
+
+    <script>
+        // Enkel chattbotlogik
+        function toggleChat() {
+            const chatBody = document.getElementById('chatbotBody');
+            chatBody.style.display = chatBody.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function handleInput(event) {
+            if (event.key === 'Enter') {
+                const input = document.getElementById('chatInput').value;
+                if (input.trim() === '') return;
+
+                // Lägg till användarens fråga
+                const chatOutput = document.getElementById('chatOutput');
+                const userMessage = document.createElement('div');
+                userMessage.classList.add('user-message');
+                userMessage.textContent = input;
+                chatOutput.appendChild(userMessage);
+
+                // Svara baserat på input
+                const botMessage = document.createElement('div');
+                botMessage.classList.add('bot-message');
+                if (input.toLowerCase().includes('hej')) {
+                    botMessage.textContent = 'Hej! Hur kan jag hjälpa dig idag?';
+                } else if (input.toLowerCase().includes('pris')) {
+                    botMessage.textContent = 'Våra priser varierar beroende på produkt. Vänligen kolla våra kollektioner.';
+                } else {
+                    botMessage.textContent = 'Jag är här för att hjälpa till! Fråga om våra produkter eller tjänster.';
+                }
+                chatOutput.appendChild(botMessage);
+
+                // Rensa inputfältet
+                document.getElementById('chatInput').value = '';
+                chatOutput.scrollTop = chatOutput.scrollHeight;
+            }
+        }
+    </script>
 </body>
 </html>
