@@ -24,6 +24,18 @@ img {
   height: auto;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  white-space: nowrap; 
+}
+
 /* Mobile-first approach using clamp() */
 
 /* Contact Banner */
@@ -78,7 +90,7 @@ img {
 
 .contact-form {
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto;
 }
 
@@ -130,7 +142,7 @@ textarea::placeholder {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 50px 20px;
+  padding: 50px 0 0;
   background-color: #fff;
 }
 
@@ -185,6 +197,74 @@ textarea::placeholder {
   border-color: #000;
 }
 
+/* Store Info Section - Mobile First */
+.store-info-section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 50px 0 0;
+  background-color: #fff;
+}
+
+.store-text {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.store-text h2, .store-text h3 {
+  font-family: 'Georgia', serif;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.store-text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.store-text h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.store-text a {
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid #333;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.store-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.store-text ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.store-text ul li {
+  margin-bottom: 10px;
+}
+
+/* Store Image */
+.store-image {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.store-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
 /* Adaptation for larger screens */
 @media (min-width: 768px) {
   .contact-form {
@@ -206,5 +286,27 @@ textarea::placeholder {
 
   .support-text {
     width: 50%;
+    padding-right: 100px;
   }
+
+  .store-info-section {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+}
+
+.store-text {
+    width: 50%;
+    margin-bottom: 0;
+    padding-left: 50px;
+}
+
+.store-image {
+    width: 50%;
+}
+
+.store-image img {
+    height: 100%;
+}
 }

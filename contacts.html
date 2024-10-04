@@ -10,73 +10,69 @@
 <body>
 
     <!-- Section 1: Banner with overlay -->
-    <section class="contact-banner">
+    <section class="contact-banner" aria-labelledby="banner-heading">
         <div class="overlay"></div>
         <img src="images/covercontacts.jpg" alt="Jewelry store contact banner" class="banner-image">
         <div class="banner-text">
-            <h1>Contact Us</h1>
+            <h1 id="banner-heading">Contact Us</h1>
         </div>
     </section>
 
-    <!-- Section 2: Contact Form -->
-    <section class="contact-form-section">
-        <form action="#" method="post" class="contact-form" aria-label="Contact Form">
-            <label for="name" class="visually-hidden"></label>
-            <input type="text" id="name" name="name" class="input-field" placeholder="Name" required>
+    <!-- Section 2: Contact Form -->    <section class="contact-form-section" aria-labelledby="contact-form-heading"></section>
+        <h2 id="contact-form-heading" class="visually-hidden">Contact Form</h2> <!-- скрытый заголовок для формы -->
+        <form action="#" method="post" class="contact-form" aria-labelledby="contact-form-heading">
             
-            <label for="email" class="visually-hidden"></label>
-            <input type="email" id="email" name="email" class="input-field" placeholder="Email" required>
-
-            <label for="phone" class="visually-hidden"></label>
-            <input type="tel" id="phone" name="phone" class="input-field" placeholder="Phone Number">
-
-            <label for="order" class="visually-hidden"></label>
-            <input type="text" id="order" name="order" class="input-field" placeholder="Order Number">
-
-            <label for="message" class="visually-hidden"></label>
-            <textarea id="message" name="message" class="input-field" placeholder="Message" rows="5" required></textarea>
+            <label for="name" class="visually-hidden">Name</label>
+            <input type="text" id="name" name="name" class="input-field" placeholder="Name" required aria-required="true">
             
-            <button type="submit" class="send-button">Send</button>
+            <label for="email" class="visually-hidden">Email</label>
+            <input type="email" id="email" name="email" class="input-field" placeholder="Email" required aria-required="true">
+
+            <label for="phone" class="visually-hidden">Phone Number</label>
+            <input type="tel" id="phone" name="phone" class="input-field" placeholder="Phone Number" aria-required="false">
+
+            <label for="order" class="visually-hidden">Order Number</label>
+            <input type="text" id="order" name="order" class="input-field" placeholder="Order Number" aria-required="false">
+
+            <label for="message" class="visually-hidden">Message</label>
+            <textarea id="message" name="message" class="input-field" placeholder="Message" rows="5" required aria-required="true"></textarea>
+            
+            <button type="submit" class="send-button" aria-label="Send Message">Send</button>
         </form>
     </section>
 
 <!-- Section 3: Customer Support Info -->
-<section class="support-info-section">
+<section class="support-info-section" aria-labelledby="support-heading">
   <div class="support-image">
-      <img src="images/customer-support.jpg" alt="Customer Support Image">
+      <img src="images/customer-support.jpg">
   </div>
   <div class="support-text">
       <h2>Online Enquiries</h2>
       <p>Måndag - Fredag - 8:00 till 18:00</p>
 
       <h3>Live chat</h3>
-      <p>Our team of stylists and by charlotte jewellery experts are available to give you instant jewellery and styling advice via our Live Chat service.</p>
+      <p>Our team of stylists and jewellery experts are available to give you instant jewellery and styling advice via our Live Chat service.</p>
       <p>Our Live Chat service will be closed during NSW public holiday dates listed <a href="#">here</a>.</p>
 
       <h3>Phone</h3>
-      <p><a href="tel:(02) 8030 7095">(02) 8030 7095</a></p>
+      <p><a href="tel:(02) 8030 7095" aria-label="Call customer support">(02) 8030 7095</a></p>
 
       <h3>Email</h3>
-      <p><a href="mailto:customercare@jewelry.se">customercare@jewelry.se</a></p>
+      <p><a href="mailto:customercare@jewelry.se" aria-label="Email customer support">customercare@jewelry.se</a></p>
 
       <h2>Wholesale</h2>
       <p>För alla grossistförfrågningar</p>
-      <p><a href="mailto:wholesale@jewelry.se">wholesale@jewelry.se</a></p>
+      <p><a href="mailto:wholesale@jewelry.se" aria-label="Email wholesale inquiries">wholesale@jewelry.se</a></p>
 
-      <h2>Press</h2>
-      <p>För alla medie- och samarbetsförfrågningar</p>
-      <p><a href="mailto:fashion@jewelry.se">fashion@jewelry.se</a></p>
   </div>
 </section>
 
-
-    <!-- Section 4: Malmo Flagship 
-    <section class="store-info-section malmo-flagship">
+    <section class="store-info-section malmo-flagship" aria-labelledby="malmo-flagship-heading">
         <div class="store-text">
-            <h2>Vår Malmo Flagship</h2>
+            <h2 id="malmo-flagship-heading">Vår Malmo Flagship</h2>
             <p>43 William Street, Centrum, Malmo</p>
-            <h3>Telefon</h3>
-            <p>(040) 123 4567</p>
+            <h3>Phone</h3>
+            <p><a href="tel:(040) 123 4567" aria-label="Call Malmo flagship store">(040) 123 4567</a></p>
             <h3>Butikens öppettider</h3>
             <ul>
                 <li>Måndag till Onsdag - 10:00 till 17:00</li>
@@ -87,29 +83,10 @@
             </ul>
         </div>
         <div class="store-image">
-            <img src="images/malmo-flagship.jpg" alt="Malmo Flagship Image">
+            <img src="images/malmo-flagship.jpg" alt="Malmo Flagship store Image">
         </div>
     </section>
 
-    <!-- Section 5: Lund Pop-Up 
-    <section class="store-info-section lund-popup">
-        <div class="store-image">
-            <img src="images/lund-popup.jpg" alt="Lund Pop-Up Image">
-        </div>
-        <div class="store-text">
-            <h2>Vår Lund Pop-Up</h2>
-            <p>Nivå 2, (mittemot Lululemon), Westfield Shopping Centre, Kingsway 600, Lund</p>
-            <h3>Telefon</h3>
-            <p>(046) 765 4321</p>
-            <h3>Butikens öppettider</h3>
-            <ul>
-                <li>Måndag till Fredag - 9:30 till 18:00</li>
-                <li>Lördag - 9:00 till 18:00</li>
-                <li>Söndag - 10:00 till 18:00</li>
-            </ul>
-        </div>
-    </section>
-    -->
 
 </body>
 </html>
