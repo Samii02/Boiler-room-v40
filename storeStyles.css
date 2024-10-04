@@ -68,7 +68,7 @@ header, footer {
 
 /* Hover effect for navigation links */
 .nav-links a:hover {
-    color: #67000e; /* Change color on hover */
+    color: #8f0013; /* Change color on hover */
 }
 
 /* Layout for store items */
@@ -109,6 +109,9 @@ header, footer {
     transform: translateY(-5px);
 }
 
+.responsive-heading {
+    font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem);
+}
 
 /* Responsive for tablet (768px to 1024px) */
 @media (max-width: 1024px) {
@@ -132,6 +135,7 @@ header, footer {
         top: 60px; /* Position below the navbar */
         left: 0;
         width: 100%; /* Full width */
+        padding: 12px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow */
         z-index: 1; /* Ensure it appears above other content */
     }
