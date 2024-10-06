@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Välkommen till vår exklusiva smyckesbutik. Utforska våra eleganta smycken för alla tillfällen.">
+    <title>Exklusiva Smycken | Smyckesbutiken</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="https://snoofsweden.com/wp-content/uploads/2022/07/logo.svg" alt="Smyckesbutikens logotyp"></a>
+            </div>
+            <button class="toggle-button" aria-label="Toggle navigation">
+                &#9776; <!-- Hamburger icon --> </button>
+            <ul class="nav-links">
+                <li><a href="index.html" aria-current="page">Hem</a></li>
+                <li><a href="store.html">Kollektioner</a></li>
+                <li><a href="smyckesnyheter.html">Nyheter</a></li>
+                <li><a href="contacts.html">Kontakt</a></li>
+            </ul>
+        </nav>
+        <section class="hero">
+            <h1>Exklusiva Smycken för Alla Tillfällen</h1>
+            <p>Upptäck eleganta och tidlösa smycken som förgyller varje ögonblick.</p>
+            <a href="#" class="cta-btn">Utforska Kollektioner</a>
+        </section>
+    </header>
+
+    <main>
+        <section class="about">
+            <h2>Om Oss</h2>
+            <p>Vi på Smyckesbutiken erbjuder handplockade smycken som speglar både tradition och innovation. Våra kollektioner är designade med omtanke för kvalitet och stil, för att göra varje stund oförglömlig.</p>
+        </section>
+
+        <section class="featured-products">
+            <h2>Utvalda Produkter</h2>
+            <div class="product-gallery">
+                <div class="product">
+                    <img src="https://www.pilgrim.net/cdn/shop/files/632312024_638276715980000000_ac9668e8-4914-49ef-a16e-2b20aabbc963.jpg?v=1713953577&width=576" alt="Elegant guldring">
+                    <h3>Guldring</h3>
+                    <p>Tidlös design med vackra detaljer.</p>
+                </div>
+                <div class="product">
+                    <img src="https://www.pilgrim.net/cdn/shop/files/692336011_638276716420000000_858a3b81-b9ca-4ae9-8dda-c8cef5ab425c.jpg?v=1713953876&width=750" alt="Silverhalsband">
+                    <h3>Silverhalsband</h3>
+                    <p>Elegant och stilrent halsband.</p>
+                </div>
+                <div class="product">
+                    <img src="https://www.pilgrim.net/cdn/shop/files/142446002_638477487700000000.jpg?v=1727959190&width=750" alt="Diamantarmband">
+                    <h3>Diamantarmband</h3>
+                    <p>Exklusivt armband med diamanter.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Chattbot-sektionen -->
+    <div class="chatbot-container">
+        <div class="chatbot-header" onclick="toggleChat()">
+            <h4>Chattbot</h4>
+        </div>
+        <div class="chatbot-body" id="chatbotBody">
+            <div class="chat-output" id="chatOutput"></div>
+            <input type="text" id="chatInput" placeholder="Skriv din fråga här..." onkeydown="handleInput(event)">
+        </div>
+    </div>
+
+    <footer>
+        <div>
+            <p>&copy; 2024 Store Name. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Enkel chattbotlogik
+        function toggleChat() {
+            const chatBody = document.getElementById('chatbotBody');
+            chatBody.style.display = chatBody.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function handleInput(event) {
+            if (event.key === 'Enter') {
+                const input = document.getElementById('chatInput').value;
+                if (input.trim() === '') return;
+
+                // Lägg till användarens fråga
+                const chatOutput = document.getElementById('chatOutput');
+                const userMessage = document.createElement('div');
+                userMessage.classList.add('user-message');
+                userMessage.textContent = input;
+                chatOutput.appendChild(userMessage);
+
+                // Svara baserat på input
+                const botMessage = document.createElement('div');
+                botMessage.classList.add('bot-message');
+                if (input.toLowerCase().includes('hej')) {
+                    botMessage.textContent = 'Hej! Hur kan jag hjälpa dig idag?';
+                } else if (input.toLowerCase().includes('pris')) {
+                    botMessage.textContent = 'Våra priser varierar beroende på produkt. Vänligen kolla våra kollektioner.';
+                } else {
+                    botMessage.textContent = 'Jag är här för att hjälpa till! Fråga om våra produkter eller tjänster.';
+                }
+                chatOutput.appendChild(botMessage);
+
+                // Rensa inputfältet
+                document.getElementById('chatInput').value = '';
+                chatOutput.scrollTop = chatOutput.scrollHeight;
+            }
+        }
+    </script>
+
+    <script>
+        document.querySelector('.toggle-button').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

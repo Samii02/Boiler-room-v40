@@ -1,0 +1,314 @@
+/* Grundläggande stilar för tillgänglighet och layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #000; /* Svart text på ljus bakgrund */
+    background-color: #f9f9f9;
+    overflow-x: hidden; /* Döljer horisontell scrollning */
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    color: #555;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 1.5rem;
+}
+
+.nav-links li a {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #000; /* Svart text på vit bakgrund */
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('https://picsum.photos/1200/600?random=4'); /* Placeholder-bild */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-btn {
+    background-color: #000;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+.cta-btn:hover {
+    background-color: #333;
+}
+
+/* About Section */
+.about {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: #fff;
+    color: #000; /* Svart text på vit bakgrund */
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.about p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Featured Products */
+.featured-products {
+    padding: 3rem 2rem;
+    background-color: #f1f1f1;
+    text-align: center;
+    color: #000; /* Svart text på ljus bakgrund */
+}
+
+.featured-products h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.product-gallery {
+    display: flex;
+    justify-content: space-around;
+    gap: 1.5rem;
+    flex-wrap: wrap; /* Gör att produkterna bryts vid mindre skärmar */
+}
+
+.product {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 300px; /* Maxbredd för produkten */
+    flex: 1; /* Gör produkterna flexibla */
+    margin: 0 10px; /* Lägger till marginal för produkterna */
+}
+
+.product img {
+    border-bottom: 1px solid #f1f1f1;
+    margin-bottom: 1rem;
+}
+
+.product h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #000; /* Svart text */
+}
+
+.product p {
+    font-size: 1rem;
+    color: #000; /* Svart text */
+}
+
+/* Footer */
+header, footer {
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Set max width for the header */
+    margin: 0 auto; /* Center the navbar */
+    padding: 0 20px; /* Add padding for the navbar */
+}
+
+.toggle-button {
+    display: none; /* Hide by default */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.logo img {
+    height: 50px; /* Set logo height */
+}
+
+/* Navigation links styles */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Space between links */
+    margin: 0; /* Remove default margin */
+    font-variant: small-caps;
+    font-weight: 700;
+}
+
+.nav-links li {
+    display: inline; /* Inline links */
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-size: clamp(1rem, 2vw, 1.2rem); /* Responsive font size */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Navigation links styles */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Space between links */
+    margin: 0; /* Remove default margin */
+    font-variant: small-caps;
+    font-weight: 700;
+}
+
+.nav-links li {
+    display: inline; /* Inline links */
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-size: clamp(1rem, 2vw, 1.2rem); /* Responsive font size */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for navigation links */
+.nav-links a:hover {
+    color: #67000e; /* Change color on hover */
+}
+/* Chattbot */
+.chatbot-container {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.chatbot-header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.chatbot-body {
+    display: none;
+    background-color: #fff;
+    padding: 1rem;
+}
+
+.chat-output {
+    height: 200px;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.user-message, .bot-message {
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+}
+
+.user-message {
+    background-color: #f1f1f1;
+    text-align: left;
+}
+
+.bot-message {
+    background-color: #eee;
+    text-align: left;
+}
+
+input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .product-gallery {
+        flex-direction: column; /* Bryt produkterna i kolumner istället */
+        align-items: center; /* Centrera produkterna */
+    }
+
+    .product {
+        max-width: 90%; /* Låt produkterna ta upp mer utrymme på små skärmar */
+        margin: 10px 0; /* Marginal mellan produkterna */
+    }
+    .nav-links {
+        display: none; /* Hide links by default */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Absolute positioning for dropdown */
+        background-color: white; /* Match the navbar's background */
+        top: 60px; /* Position below the navbar */
+        left: 0;
+        width: 100%; /* Full width */
+        padding: 12px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow */
+        z-index: 1; /* Ensure it appears above other content */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show links when active */
+    }
+
+    .toggle-button {
+        display: block; /* Show the toggle button on small screens */
+    }
+}
