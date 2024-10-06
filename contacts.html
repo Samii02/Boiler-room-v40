@@ -9,6 +9,23 @@
 </head>
 <body>
 
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="https://snoofsweden.com/wp-content/uploads/2022/07/logo.svg" alt="Smyckesbutikens logotyp"></a>
+            </div>
+            <button class="toggle-button" aria-label="Toggle navigation">
+                &#9776; <!-- Hamburger icon -->
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html" aria-current="page">Hem</a></li>
+                <li><a href="#">Kollektioner</a></li>
+                <li><a href="#">Nyheter</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <!-- Section 1: Banner with overlay -->
     <section class="contact-banner" aria-labelledby="banner-heading">
         <div class="overlay"></div>
@@ -87,6 +104,18 @@
         </div>
     </section>
 
+    <footer>
+        <div>
+            <p>&copy; 2024 Store Name. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        document.querySelector('.toggle-button').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        });
+    </script>
 
 </body>
 </html>
