@@ -8,7 +8,20 @@
 </head>
 <body>
     <header>
-        <h1>Smyckesnyheter</h1>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="https://snoofsweden.com/wp-content/uploads/2022/07/logo.svg" alt="Smyckesbutikens logotyp"></a>
+            </div>
+            <button class="toggle-button" aria-label="Toggle navigation">
+                &#9776; <!-- Hamburger icon -->
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html" aria-current="page">Hem</a></li>
+                <li><a href="store.html">Kollektioner</a></li>
+                <li><a href="smyckesnyheter.html">Nyheter</a></li>
+                <li><a href="contacts.html">Kontakt</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <section id="rings">
@@ -27,5 +40,19 @@
             <p>Upptäck vårt sortiment av halsband som lyfter varje outfit.</p>
         </section>
     </main>
+
+    <footer>
+        <div>
+            <p>&copy; 2024 Store Name. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        document.querySelector('.toggle-button').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        });
+    </script>
+    
 </body>
 </html>
