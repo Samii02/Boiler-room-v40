@@ -1,0 +1,56 @@
+/* Grundläggande styling för sidan */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+h1 {
+    color: #2a2a72;
+    margin: 0;
+}
+
+main {
+    max-width: 800px; /* Begränsar bredden till en överskådlig storlek */
+    margin: 20px auto; /* Centrerar huvudområdet */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Avstånd mellan varje sektion */
+}
+
+section {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center; /* Centrerar innehållet */
+}
+
+section img {
+    width: 500px; /* Öka bredden på bilderna */
+    height: auto; /* Behåller bildens proportioner */
+    margin-bottom: 15px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+section h2 {
+    color: #2a2a72;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.6;
+}
