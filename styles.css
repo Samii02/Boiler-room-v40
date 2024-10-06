@@ -151,16 +151,11 @@ img {
 }
 
 /* Footer */
-footer {
-    background-color: #333;
-    color: white;
+header, footer {
+    background-color: white;
+    color: black;
     text-align: center;
     padding: 1rem;
-    margin-top: 2rem;
-}
-
-footer p {
-    font-size: 0.9rem;
 }
 
 /* Navbar styles */
@@ -304,12 +299,15 @@ input[type="text"] {
         top: 60px; /* Position below the navbar */
         left: 0;
         width: 100%; /* Full width */
+        padding: 12px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow */
         z-index: 1; /* Ensure it appears above other content */
     }
+
     .nav-links.active {
         display: flex; /* Show links when active */
     }
+
     .toggle-button {
         display: block; /* Show the toggle button on small screens */
     }
