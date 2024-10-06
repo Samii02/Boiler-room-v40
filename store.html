@@ -9,99 +9,103 @@
 <body>
 
     <header>
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Main Navigation">
             <div class="logo">
-                <a href="index.html"><img src="https://snoofsweden.com/wp-content/uploads/2022/07/logo.svg" alt="Smyckesbutikens logotyp"></a>
+                <a href="index.html" title="Go to homepage">
+                    <img src="https://snoofsweden.com/wp-content/uploads/2022/07/logo.svg" alt="Smyckesbutikens logotyp">
+                </a>
             </div>
-            <button class="toggle-button" aria-label="Toggle navigation">
+            <button class="toggle-button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navigation-menu">
                 &#9776; <!-- Hamburger icon -->
             </button>
-            <ul class="nav-links">
-                <li><a href="index.html" aria-current="page">Hem</a></li>
-                <li><a href="#">Kollektioner</a></li>
-                <li><a href="#">Nyheter</a></li>
-                <li><a href="#">Kontakt</a></li>
+            <ul class="nav-links" id="navigation-menu" aria-label="Primary Navigation Menu">
+                <li><a href="index.html" aria-current="page" title="Home">Hem</a></li>
+                <li><a href="#" title="Collections">Kollektioner</a></li>
+                <li><a href="#" title="New Arrivals">Nyheter</a></li>
+                <li><a href="#" title="Contact Us">Kontakt</a></li>
             </ul>
         </nav>
     </header>
 
-<main>
-    <section class="store-items">
-        <article class="item">
-            <img src="https://www.pilgrim.net/cdn/shop/files/631916034_638276715510000000.jpg?v=1713953538&width=576" alt="LULU återvunnen stackring silverpläterad">
-            <h2 class="responsive-heading">LULU återvunnen stackring silverpläterad</h2>
-            <p>$19.99</p>
-        </article>
-        <article class="item">
-            <img src="https://www.pilgrim.net/cdn/shop/files/632312024_638276715980000000_ac9668e8-4914-49ef-a16e-2b20aabbc963.jpg?v=1713953577&width=576" alt="LULU återvunnen tvinnad stapelring guldpläterad">
-            <h2 class="responsive-heading">LULU återvunnen tvinnad stapelring guldpläterad</h2>
-            <p>$29.99</p>
-        </article>
-        <article class="item">
-            <img src="https://www.pilgrim.net/cdn/shop/files/112032004_638276713250000000_22cd50a4-f290-4a94-88e2-35afec96caec.jpg?v=1713952812&width=750" alt="Ring : Sensitivity : Guldpläterad">
-            <h2 class="responsive-heading">Ring : Sensitivity : Guldpläterad</h2>
-            <p>$39.99</p>
-        </article>
-        <article class="item">
-            <img src="https://www.pilgrim.net/cdn/shop/files/692336011_638276716420000000_858a3b81-b9ca-4ae9-8dda-c8cef5ab425c.jpg?v=1713953876&width=750" alt="DOMINIQUE återvunnet halsband silverpläterat">
-            <h2 class="responsive-heading">DOMINIQUE återvunnet halsband silverpläterat</h2>
-            <p>$49.99</p>
-        </article>
-        <article class="item">
-            <img src="https://www.pilgrim.net/cdn/shop/files/692332011_638276716040000000.jpg?v=1713953868&width=750" alt="DOMINIQUE återvunnet halsband guldpläterat">
-            <h2 class="responsive-heading">DOMINIQUE återvunnet halsband guldpläterat</h2>
-            <p>$59.99</p>
-        </article>
-        <article class="item">
-            <img src="https://www.pilgrim.net/cdn/shop/files/132036001_638276712920000000_35e435e1-f1dd-4835-9893-f37634201c95.jpg?v=1713952897&width=750" alt="Halsband : Intuition : Silverpläterad">
-            <h2 class="responsive-heading">Halsband : Intuition : Silverpläterad</h2>
-            <p>$69.99</p>
-        </article>
-        <article class="item">
-            <img src="https://www.pilgrim.net/cdn/shop/files/142446002_638477487700000000.jpg?v=1727959190&width=750" alt="CONNECT återvunnet kristallarmband silverpläterat">
-            <h2 class="responsive-heading">CONNECT återvunnet kristallarmband silverpläterat</h2>
-            <p>$79.99</p>
-        </article>
-        <article class="item">
-            <img src="https://www.pilgrim.net/cdn/shop/files/632316002_638276715600000000_20f7b9e6-da37-4f6e-9a3b-25ba0ab05070.jpg?v=1713953574&width=750" alt="BAKER armband 3-i-1-set silverpläterat">
-            <h2 class="responsive-heading">BAKER armband 3-i-1-set silverpläterat</h2>
-            <p>$89.99</p>
-        </article>
-        <article class="item">
-            <img src="https://www.pilgrim.net/cdn/shop/files/682332002_638276716320000000_8d53e3fb-db05-423a-aa3f-153022d458f0.jpg?v=1713953782&width=750" alt="DESIREE återvunnet armband guldpläterat">
-            <h2 class="responsive-heading">BAKER armband 3-i-1-set guldpläterat</h2>
-            <p>$99.99</p>
-        </article>
-        <article class="item">
-            <img src="https://www.pilgrim.net/cdn/shop/files/611532133_638276716090000000.jpg?v=1713953420&width=1500" alt="TAHOE återvunna örhängen guldpläterade">
-            <h2 class="responsive-heading">TAHOE återvunna örhängen guldpläterade</h2>
-            <p>$99.99</p>
-        </article>
-        <article class="item">
-            <img src="https://www.pilgrim.net/cdn/shop/files/611636043_638276716010000000.jpg?v=1713953423&width=1077" alt="TAHOE återvunna örhängen med kedja silverpläterade">
-            <h2 class="responsive-heading">TAHOE återvunna örhängen med kedja silverpläterade</h2>
-            <p>$99.99</p>
-        </article>
-        <article class="item">
-            <img src="https://www.pilgrim.net/cdn/shop/files/601632023_638276716350000000.jpg?v=1713953330&width=1500" alt="TILLY återvunna stora ringar örhängen guldpläterade">
-            <h2 class="responsive-heading">TILLY återvunna stora ringar örhängen guldpläterade</h2>
-            <p>$99.99</p>
-        </article>
-    </section>
-</main>
+    <main>
+        <section class="store-items" aria-label="Store Jewelry Items">
+            <article class="item" aria-labelledby="item1-title" aria-describedby="item1-price">
+                <img src="https://www.pilgrim.net/cdn/shop/files/631916034_638276715510000000.jpg?v=1713953538&width=576" alt="LULU återvunnen stackring silverpläterad">
+                <h2 id="item1-title" class="responsive-heading">LULU återvunnen stackring silverpläterad</h2>
+                <p id="item1-price">$19.99</p>
+            </article>
+            <article class="item" aria-labelledby="item2-title" aria-describedby="item2-price">
+                <img src="https://www.pilgrim.net/cdn/shop/files/632312024_638276715980000000_ac9668e8-4914-49ef-a16e-2b20aabbc963.jpg?v=1713953577&width=576" alt="LULU återvunnen tvinnad stapelring guldpläterad">
+                <h2 id="item2-title" class="responsive-heading">LULU återvunnen tvinnad stapelring guldpläterad</h2>
+                <p id="item2-price">$29.99</p>
+            </article>
+            <article class="item" aria-labelledby="item3-title" aria-describedby="item3-price">
+                <img src="https://www.pilgrim.net/cdn/shop/files/112032004_638276713250000000_22cd50a4-f290-4a94-88e2-35afec96caec.jpg?v=1713952812&width=750" alt="Ring : Sensitivity : Guldpläterad">
+                <h2 id="item3-title" class="responsive-heading">Ring : Sensitivity : Guldpläterad</h2>
+                <p id="item3-price">$39.99</p>
+            </article>
+            <article class="item" aria-labelledby="item4-title" aria-describedby="item4-price">
+                <img src="https://www.pilgrim.net/cdn/shop/files/692336011_638276716420000000_858a3b81-b9ca-4ae9-8dda-c8cef5ab425c.jpg?v=1713953876&width=750" alt="DOMINIQUE återvunnet halsband silverpläterat">
+                <h2 id="item4-title" class="responsive-heading">DOMINIQUE återvunnet halsband silverpläterat</h2>
+                <p id="item4-price">$49.99</p>
+            </article>
+            <article class="item" aria-labelledby="item5-title" aria-describedby="item5-price">
+                <img src="https://www.pilgrim.net/cdn/shop/files/692332011_638276716040000000.jpg?v=1713953868&width=750" alt="DOMINIQUE återvunnet halsband guldpläterat">
+                <h2 id="item5-title" class="responsive-heading">DOMINIQUE återvunnet halsband guldpläterat</h2>
+                <p id="item5-price">$59.99</p>
+            </article>
+            <article class="item" aria-labelledby="item6-title" aria-describedby="item6-price">
+                <img src="https://www.pilgrim.net/cdn/shop/files/132036001_638276712920000000_35e435e1-f1dd-4835-9893-f37634201c95.jpg?v=1713952897&width=750" alt="Halsband : Intuition : Silverpläterad">
+                <h2 id="item6-title" class="responsive-heading">Halsband : Intuition : Silverpläterad</h2>
+                <p id="item6-price">$69.99</p>
+            </article>
+            <article class="item" aria-labelledby="item7-title" aria-describedby="item7-price">
+                <img src="https://www.pilgrim.net/cdn/shop/files/142446002_638477487700000000.jpg?v=1727959190&width=750" alt="CONNECT återvunnet kristallarmband silverpläterat">
+                <h2 id="item7-title" class="responsive-heading">CONNECT återvunnet kristallarmband silverpläterat</h2>
+                <p id="item7-price">$79.99</p>
+            </article>
+            <article class="item" aria-labelledby="item8-title" aria-describedby="item8-price">
+                <img src="https://www.pilgrim.net/cdn/shop/files/632316002_638276715600000000_20f7b9e6-da37-4f6e-9a3b-25ba0ab05070.jpg?v=1713953574&width=750" alt="BAKER armband 3-i-1-set silverpläterat">
+                <h2 id="item8-title" class="responsive-heading">BAKER armband 3-i-1-set silverpläterat</h2>
+                <p id="item8-price">$89.99</p>
+            </article>
+            <article class="item" aria-labelledby="item9-title" aria-describedby="item9-price">
+                <img src="https://www.pilgrim.net/cdn/shop/files/682332002_638276716320000000_8d53e3fb-db05-423a-aa3f-153022d458f0.jpg?v=1713953782&width=750" alt="DESIREE återvunnet armband guldpläterat">
+                <h2 id="item9-title" class="responsive-heading">BAKER armband 3-i-1-set guldpläterat</h2>
+                <p id="item9-price">$99.99</p>
+            </article>
+            <article class="item" aria-labelledby="item10-title" aria-describedby="item10-price">
+                <img src="https://www.pilgrim.net/cdn/shop/files/611532133_638276716090000000.jpg?v=1713953420&width=1500" alt="TAHOE återvunna örhängen guldpläterade">
+                <h2 id="item10-title" class="responsive-heading">TAHOE återvunna örhängen guldpläterade</h2>
+                <p id="item10-price">$99.99</p>
+            </article>
+            <article class="item" aria-labelledby="item11-title" aria-describedby="item11-price">
+                <img src="https://www.pilgrim.net/cdn/shop/files/611636043_638276716010000000.jpg?v=1713953423&width=1077" alt="TAHOE återvunna örhängen med kedja silverpläterade">
+                <h2 id="item11-title" class="responsive-heading">TAHOE återvunna örhängen med kedja silverpläterade</h2>
+                <p id="item11-price">$99.99</p>
+            </article>
+            <article class="item" aria-labelledby="item12-title" aria-describedby="item12-price">
+                <img src="https://www.pilgrim.net/cdn/shop/files/601632023_638276716350000000.jpg?v=1713953330&width=1500" alt="TILLY återvunna stora ringar örhängen guldpläterade">
+                <h2 id="item12-title" class="responsive-heading">TILLY återvunna stora ringar örhängen guldpläterade</h2>
+                <p id="item12-price">$99.99</p>
+            </article>
+        </section>
+    </main>
 
-<footer>
-    <div>
-        <p>&copy; 2024 Store Name. All rights reserved.</p>
-    </div>
-</footer>
+    <footer aria-label="Store Footer">
+        <div>
+            <p>&copy; 2024 Store Name. All rights reserved.</p>
+        </div>
+    </footer>
 
-<script>
-    document.querySelector('.toggle-button').addEventListener('click', function() {
-        const navLinks = document.querySelector('.nav-links');
-        navLinks.classList.toggle('active');
-    });
-</script>
+    <script>
+        document.querySelector('.toggle-button').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+            this.setAttribute('aria-expanded', !expanded);
+            navLinks.classList.toggle('active');
+        });
+    </script>
 
 </body>
 </html>
